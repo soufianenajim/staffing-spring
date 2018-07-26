@@ -11,19 +11,19 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="employee_tb")
+@Table(name = "employee_tb")
 public class Employee {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private String name;
-	
-	@OneToMany(mappedBy="refEmployee",fetch=FetchType.LAZY)
+
+	@OneToMany(mappedBy = "refEmployee", fetch = FetchType.LAZY)
 	private List<EmployeeProject> employeesProject;
-	
-	@OneToMany(mappedBy="refEmployee")
+
+	@OneToMany(mappedBy = "refEmployee")
 	private List<StatusStaffing> statusStaffings;
 
 	public Long getId() {
@@ -57,10 +57,5 @@ public class Employee {
 	public void setStatusStaffings(List<StatusStaffing> statusStaffings) {
 		this.statusStaffings = statusStaffings;
 	}
-
-	
-	
-	
-	
 
 }

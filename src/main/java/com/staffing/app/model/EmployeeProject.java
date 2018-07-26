@@ -24,23 +24,20 @@ public class EmployeeProject {
 
 	@Temporal(TemporalType.DATE)
 	private Date dateFrom;
-	//
+
 	@Temporal(TemporalType.DATE)
 	private Date dateTo;
-	//
+
 	@ManyToOne
 	@JoinColumn(name = "EMPLOYEE_ID")
 	private Employee refEmployee;
-	// //
 
 	@ManyToOne
 	@JoinColumn(name = "PROJECT_ID")
 	private Project refProject;
-	//
+
 	@OneToMany(mappedBy = "refEmployeeProject")
 	private List<Staffing> staffings;
-
-	// //
 
 	public Long getId() {
 		return id;
@@ -50,9 +47,6 @@ public class EmployeeProject {
 		this.id = id;
 	}
 
-	//
-
-	//
 	public Employee getRefEmployee() {
 		return refEmployee;
 	}
@@ -85,7 +79,6 @@ public class EmployeeProject {
 		this.refProject = refProject;
 	}
 
-	//
 	public List<Staffing> getStaffings() {
 		return staffings;
 	}
