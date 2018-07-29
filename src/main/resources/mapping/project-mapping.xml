@@ -19,10 +19,10 @@
 			<b>name</b>
 		</field>
 
-		<field-exclude>
+	<!-- 	<field-exclude>
 			<a>employeesProject</a>
 			<b>employeesProject</b>
-		</field-exclude>
+		</field-exclude> -->
 
 	</mapping>
 

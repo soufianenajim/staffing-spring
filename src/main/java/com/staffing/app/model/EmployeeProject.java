@@ -14,6 +14,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "employee_project_tb")
 public class EmployeeProject {
@@ -36,6 +38,7 @@ public class EmployeeProject {
 	@JoinColumn(name = "PROJECT_ID")
 	private Project refProject;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "refEmployeeProject")
 	private List<Staffing> staffings;
 

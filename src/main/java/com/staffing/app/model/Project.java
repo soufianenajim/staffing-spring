@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "project_tb")
 public class Project {
@@ -16,7 +18,7 @@ public class Project {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-
+	@JsonIgnore
 	@OneToMany(mappedBy = "refProject")
 	private List<EmployeeProject> employeesProject;
 

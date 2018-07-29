@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "staffing_tb")
 public class Staffing {
@@ -20,7 +22,8 @@ public class Staffing {
 	private Date dateStaffing;
 
 	private String duration;
-
+    
+	
 	@ManyToOne
 	@JoinColumn(name = "EMPLOYEEPROJECT_ID")
 	private EmployeeProject refEmployeeProject;

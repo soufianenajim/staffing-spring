@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "employee_tb")
 public class Employee {
@@ -20,9 +22,11 @@ public class Employee {
 
 	private String name;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "refEmployee", fetch = FetchType.LAZY)
 	private List<EmployeeProject> employeesProject;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "refEmployee")
 	private List<StatusStaffing> statusStaffings;
 

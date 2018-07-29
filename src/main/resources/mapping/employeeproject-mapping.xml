@@ -35,4 +35,34 @@
 	</mapping>
 
 
+<mapping map-id="MAPPING_STAFFING_EMPLOYE_PROJECT">
+
+		<class-a>com.staffing.app.model.EmployeeProject</class-a>
+		<class-b>com.staffing.app.dto.EmployeeProjectDTO</class-b>
+
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+
+		<field>
+			<a>dateFrom</a>
+			<b>dateFrom</b>
+		</field>
+		<field>
+			<a>dateTo</a>
+			<b>dateTo</b>
+		</field>
+		<field map-id="PROJECT_MAPPING">
+			<a>refProject</a>
+			<b>refProject</b>
+		</field>
+
+		<field map-id="EMPLOYEE_EMPLOYEE_PROJECT_MAPPING">
+			<a>refEmployee</a>
+			<b>refEmployee</b>
+		</field>
+
+	</mapping>
+
 </mappings> 

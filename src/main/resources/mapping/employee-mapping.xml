@@ -19,12 +19,30 @@
 			<b>name</b>
 		</field>
 
-		<field map-id="EMPLOYEEPROJECT_MAPPING" >
+		<!-- <field map-id="EMPLOYEEPROJECT_MAPPING" >
 			<a>employeesProject</a>
 			<b>employeesProject</b>
-		</field>
+		</field> -->
 
 	</mapping>
 
+<mapping map-id="EMPLOYEE_EMPLOYEE_PROJECT_MAPPING">
+
+		<class-a>com.staffing.app.model.Employee</class-a>
+		<class-b>com.staffing.app.dto.EmployeeDTO</class-b>
+
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+
+		<field>
+			<a>name</a>
+			<b>name</b>
+		</field>
+
+		
+
+	</mapping>
 
 </mappings> 

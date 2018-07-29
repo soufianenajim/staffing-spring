@@ -4,12 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="mapper" class="org.dozer.spring.DozerBeanMapperFactoryBean">
-		<property name="mappingFiles">
-			<list>
-				<value>classpath*:mapping/*mapping.xml</value>
-			</list>
-		</property>
+	
+	
+	<bean id="mapper" class="org.dozer.spring.DozerBeanMapperFactoryBean"
+		lazy-init="false">
+		<property name="mappingFiles" value="classpath*:mapping/*mapping.xml" />
 	</bean>
+	
 
 </beans>
