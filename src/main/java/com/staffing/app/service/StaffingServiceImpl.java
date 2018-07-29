@@ -24,13 +24,13 @@ public class StaffingServiceImpl implements StaffingService {
 	@Autowired
 	Mapper mapper;
 	@Override
-	public List<Staffing>getStaffingbetweenTOdate(Date date1, Date date2) {
+	public List<StaffingDTO>getStaffingbetweenTOdate(Date date1, Date date2) {
 		
 	//	return staffingRepository.findAll(Specification.where(StaffingSpecification.lessThan(date2).and(StaffingSpecification.biggerThan(date1))));
 		List<Staffing> staffings=staffingRepository.findAll(Specification.where(StaffingSpecification.betwen(date1, date2).and(StaffingSpecification.EqualEmployee(2L))));
 		//List<Staffing> staffings=staffingRepository.findAll();
-		//return staffings.stream().map(s->mapper.map(s, StaffingDTO.class,"MAPPING_STAFFING")).collect(Collectors.toList());
+		return staffings.stream().map(s->mapper.map(s, StaffingDTO.class,"MAPPING_STAFFING")).collect(Collectors.toList());
 		//return staffingRepository.findAll();
-		return staffings;
+		//return staffings;
 	}
 }

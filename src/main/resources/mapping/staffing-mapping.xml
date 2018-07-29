@@ -4,7 +4,8 @@
 	xsi:schemaLocation="http://dozer.sourceforge.net
           http://dozer.sourceforge.net/schema/beanmapping.xsd">
 
-	<mapping map-id="MAPPING_STAFFING">
+	<mapping map-id="MAPPING_STAFFING" map-empty-string="false"
+		map-null="false" wildcard="false">
 
 		<class-a>com.staffing.app.model.Staffing</class-a>
 		<class-b>com.staffing.app.dto.StaffingDTO</class-b>
@@ -24,11 +25,10 @@
 		</field>
 
 		
-		<!-- <field map-id="MAPPING_STAFFING_EMPLOYE_PROJECT">
+	 <field map-id="MAPPING_STAFFING_EMPLOYE_PROJECT">
 			<a>refEmployeeProject</a>
 			<b>refEmployeeProject</b>
-		</field> -->
-		
+		</field> 
 
 	</mapping>
 

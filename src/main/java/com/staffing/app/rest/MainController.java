@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.staffing.app.dto.EmployeeDTO;
+import com.staffing.app.dto.StaffingDTO;
 import com.staffing.app.model.Staffing;
 import com.staffing.app.service.EmployeeService;
 import com.staffing.app.service.StaffingService;
@@ -36,7 +37,7 @@ public class MainController {
 		return employeeService.findAll();
 	}
 	@RequestMapping("/getData")
-	 public List<Staffing> findBetwen() {
+	 public List<StaffingDTO> findBetwen() {
 		 Calendar c = Calendar.getInstance();
 		 
         Date date1=c.getTime() ;
