@@ -1,5 +1,6 @@
 package com.staffing.app.utils;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import org.springframework.context.ApplicationListener;
@@ -43,7 +44,6 @@ public class AddData implements ApplicationListener<ContextRefreshedEvent> {
 		Project p = new Project();
 		p.setName("Victoria");
 		Project pSaved = projectRepository.save(p);
-		
 		EmployeeProject empr = new EmployeeProject();
 		empr.setRefEmployee(empSaved);
 		empr.setRefProject(pSaved);

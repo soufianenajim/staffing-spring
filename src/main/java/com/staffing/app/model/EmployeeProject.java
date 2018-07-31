@@ -23,10 +23,10 @@ public class EmployeeProject {
 	private Long id;
 
 	@Temporal(TemporalType.DATE)
-	private Date dateFrom;
+	private Date  dateFrom;
 
 	@Temporal(TemporalType.DATE)
-	private Date dateTo;
+	private Date  dateTo;
 
 	@ManyToOne
 	@JoinColumn(name = "EMPLOYEE_ID")
@@ -51,11 +51,11 @@ public class EmployeeProject {
 		return refEmployee;
 	}
 
-	public Date getDateFrom() {
+	public Date  getDateFrom() {
 		return dateFrom;
 	}
 
-	public void setDateFrom(Date dateFrom) {
+	public void setDateFrom(Date  dateFrom) {
 		this.dateFrom = dateFrom;
 	}
 
@@ -63,7 +63,7 @@ public class EmployeeProject {
 		return dateTo;
 	}
 
-	public void setDateTo(Date dateTo) {
+	public void setDateTo(Date  dateTo) {
 		this.dateTo = dateTo;
 	}
 

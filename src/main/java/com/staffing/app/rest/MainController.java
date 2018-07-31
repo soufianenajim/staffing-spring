@@ -20,15 +20,16 @@ public class MainController {
 	EmployeeService employeeService;
 
 	@RequestMapping("/getDataBetween")
-	public String getDataBetween(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,
+	public List<EmployeeDTO> getDataBetween(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,
 			@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date toDate) {
 
-		return "getDataBetween";
+		System.out.println("from "+fromDate+" to "+toDate);
+		return employeeService.findAllBetween(fromDate, toDate);
 	}
 
 	@RequestMapping("/findAll")
 	public List<EmployeeDTO> findAll() {
-		return employeeService.findAll();
+		return employeeService.findAllBetween(new Date(), new Date());
 	}
 
 }

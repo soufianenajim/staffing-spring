@@ -7,9 +7,9 @@ public class EmployeeProjectDTO {
 
 	private Long id;
 
-	private Date dateFrom;
+	private Date  dateFrom;
 
-	private Date dateTo;
+	private Date  dateTo;
 
 	private EmployeeDTO refEmployee;
 
@@ -25,19 +25,19 @@ public class EmployeeProjectDTO {
 		this.id = id;
 	}
 
-	public Date getDateFrom() {
+	public Date  getDateFrom() {
 		return dateFrom;
 	}
 
-	public void setDateFrom(Date dateFrom) {
+	public void setDateFrom(Date  dateFrom) {
 		this.dateFrom = dateFrom;
 	}
 
-	public Date getDateTo() {
+	public Date  getDateTo() {
 		return dateTo;
 	}
 
-	public void setDateTo(Date dateTo) {
+	public void setDateTo(Date  dateTo) {
 		this.dateTo = dateTo;
 	}
 
