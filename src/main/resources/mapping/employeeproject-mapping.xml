@@ -27,6 +27,11 @@
 			<b>refProject</b>
 		</field>
 
+		<field map-id="STAFFING_MAPPING">
+			<a>staffings</a>
+			<b>staffings</b>
+		</field>
+		
 		<field-exclude>
 			<a>refEmployee</a>
 			<b>refEmployee</b>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping map-id="STAFFING_MAPPING">
+
+		<class-a>com.staffing.app.model.Staffing</class-a>
+		<class-b>com.staffing.app.dto.StaffingDTO</class-b>
+
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+
+		<field>
+			<a>dateStaffing</a>
+			<b>dateStaffing</b>
+		</field>
+
+		<field>
+			<a>duration</a>
+			<b>duration</b>
+		</field>
+
+		<field-exclude>
+			<a>refEmployeeProject</a>
+			<b>refEmployeeProject</b>
+		</field-exclude>
+
+	</mapping>
+
+
+</mappings> 
