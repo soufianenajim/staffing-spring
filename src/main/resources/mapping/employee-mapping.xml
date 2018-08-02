@@ -18,6 +18,21 @@
 			<a>name</a>
 			<b>name</b>
 		</field>
+		
+		<field>
+			<a>loc</a>
+			<b>loc</b>
+		</field>
+		
+		<field>
+			<a>tech</a>
+			<b>tech</b>
+		</field>
+		
+		<field map-id="STATUS_STAFFING_MAPPING">
+			<a>statusStaffings</a>
+			<b>statusStaffings</b>
+		</field>
 
 		<field map-id="EMPLOYEEPROJECT_MAPPING" >
 			<a>employeesProject</a>

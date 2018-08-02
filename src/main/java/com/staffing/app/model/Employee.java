@@ -19,6 +19,8 @@ public class Employee {
 	private Long id;
 
 	private String name;
+	private String loc;
+	private String tech;
 
 	@OneToMany(mappedBy = "refEmployee", fetch = FetchType.LAZY)
 	private List<EmployeeProject> employeesProject;
@@ -58,4 +60,21 @@ public class Employee {
 		this.statusStaffings = statusStaffings;
 	}
 
+	public String getLoc() {
+		return loc;
+	}
+
+	public void setLoc(String loc) {
+		this.loc = loc;
+	}
+
+	public String getTech() {
+		return tech;
+	}
+
+	public void setTech(String tech) {
+		this.tech = tech;
+	}
+
+	
 }

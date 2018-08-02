@@ -12,10 +12,13 @@ import com.staffing.app.dao.EmployeeProjectRepository;
 import com.staffing.app.dao.EmployeeRepository;
 import com.staffing.app.dao.ProjectRepository;
 import com.staffing.app.dao.StaffingRepository;
+import com.staffing.app.dao.StatusStaffingRepository;
 import com.staffing.app.model.Employee;
 import com.staffing.app.model.EmployeeProject;
 import com.staffing.app.model.Project;
 import com.staffing.app.model.Staffing;
+import com.staffing.app.model.StatusStaffing;
+import com.staffing.app.model.Type;
 
 @Component
 public class AddData implements ApplicationListener<ContextRefreshedEvent> {
@@ -24,14 +27,18 @@ public class AddData implements ApplicationListener<ContextRefreshedEvent> {
 	EmployeeProjectRepository employeeProjectRepository;
 	ProjectRepository projectRepository;
 	StaffingRepository staffingRepository;
+	StatusStaffingRepository statusStaffingRepository;
+	
 
 	public AddData(EmployeeRepository employeeRepository, EmployeeProjectRepository employeeProjectRepository,
-			ProjectRepository projectRepository, StaffingRepository staffingRepository) {
+			ProjectRepository projectRepository, StaffingRepository staffingRepository,
+			StatusStaffingRepository statusStaffingRepository) {
 		super();
 		this.employeeRepository = employeeRepository;
 		this.employeeProjectRepository = employeeProjectRepository;
 		this.projectRepository = projectRepository;
 		this.staffingRepository = staffingRepository;
+		this.statusStaffingRepository = statusStaffingRepository;
 	}
 
 	@Override
@@ -42,17 +49,23 @@ public class AddData implements ApplicationListener<ContextRefreshedEvent> {
 	}
 
 	public void save() {
+		
+		
 		Employee emp = new Employee();
 		emp.setName("Hamza");
+		emp.setLoc("SALE");
+		emp.setTech("SI");
 		Employee empSaved = employeeRepository.save(emp);
 		
+		StatusStaffing ss = new StatusStaffing();
+		ss.setRefEmployee(empSaved);
+		ss.setType(Type.DONE);
+		ss.setDateStatusStaffing(new Date());
+		statusStaffingRepository.save(ss);
 		
 		Project p = new Project();
 		p.setName("Victoria");
 		Project pSaved = projectRepository.save(p);
-		
-		
-		
 		
 		EmployeeProject empr = new EmployeeProject();
 		empr.setRefEmployee(empSaved);
@@ -62,7 +75,7 @@ public class AddData implements ApplicationListener<ContextRefreshedEvent> {
 		
 		Staffing s = new Staffing();
 		s.setDateStaffing(new Date());
-		s.setDuration("8h");
+		s.setDuration("1d");
 		s.setRefEmployeeProject(employeeProjectRepository.save(empr));
 		staffingRepository.save(s);
 	}

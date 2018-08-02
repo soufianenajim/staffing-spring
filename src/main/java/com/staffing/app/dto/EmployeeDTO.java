@@ -7,7 +7,9 @@ public class EmployeeDTO {
 	private Long id;
 
 	private String name;
-
+	private String loc;
+	private String tech;
+	
 	private List<EmployeeProjectDTO> employeesProject;
 
 	private List<StatusStaffingDTO> statusStaffings;
@@ -44,4 +46,21 @@ public class EmployeeDTO {
 		this.statusStaffings = statusStaffings;
 	}
 
+	public String getLoc() {
+		return loc;
+	}
+
+	public void setLoc(String loc) {
+		this.loc = loc;
+	}
+
+	public String getTech() {
+		return tech;
+	}
+
+	public void setTech(String tech) {
+		this.tech = tech;
+	}
+
+	
 }
