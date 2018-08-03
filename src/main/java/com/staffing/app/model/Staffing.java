@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "staffing_tb")
@@ -17,6 +19,7 @@ public class Staffing {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Temporal(TemporalType.DATE)
 	private Date dateStaffing;
 
 	private String duration;
@@ -58,4 +61,9 @@ public class Staffing {
 	}
 	//
 
+	@Override
+	public String toString() {
+		return "Staffing [id=" + id + ", dateStaffing=" + dateStaffing + ", duration=" + duration
+				+ ", refEmployeeProject=" + refEmployeeProject + "]";
+	}
 }

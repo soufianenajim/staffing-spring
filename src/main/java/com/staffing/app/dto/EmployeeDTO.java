@@ -62,5 +62,11 @@ public class EmployeeDTO {
 		this.tech = tech;
 	}
 
+	@Override
+	public String toString() {
+		return "EmployeeDTO [id=" + id + ", name=" + name + ", loc=" + loc + ", tech=" + tech + ", employeesProject="
+				+ employeesProject + ", statusStaffings=" + statusStaffings + "]";
+	}
+
 	
 }
